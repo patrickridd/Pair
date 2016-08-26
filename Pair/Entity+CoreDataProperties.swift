@@ -15,5 +15,6 @@ import CoreData
 extension Entity {
 
     @NSManaged var name: String?
+    @NSManaged var group: String?
 
 }

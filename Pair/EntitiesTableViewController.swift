@@ -56,7 +56,7 @@ class EntitiesTableViewController: UIViewController, UITableViewDataSource,UITab
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         guard let sections =  EntityController.sharedController.fetchedResultsController.sections else {
-            return EntityController.sharedController.fetchedResultsController.fetchedObjects?.count ?? 0
+            return 0
         }
 
         return sections[section].numberOfObjects
@@ -69,6 +69,26 @@ class EntitiesTableViewController: UIViewController, UITableViewDataSource,UITab
         cell.textLabel?.text = entity.name
         
         return cell
+    }
+    
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == .Delete {
+            guard let entity = EntityController.sharedController.fetchedResultsController.objectAtIndexPath(indexPath) as? Entity else {
+                return
+            }
+            
+            EntityController.sharedController.deleteEntity(entity)
+           // tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+        }
+        
+    }
+    
+    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        guard let sections = EntityController.sharedController.fetchedResultsController.sections else {
+            return nil
+        }
+        
+        return sections[section].name
     }
     
     

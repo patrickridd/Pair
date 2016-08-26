@@ -13,10 +13,10 @@
 		21AEA80E1D709485005EF030 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21AEA80C1D709485005EF030 /* LaunchScreen.storyboard */; };
 		21AEA8181D7096C1005EF030 /* EntitiesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AEA8171D7096C1005EF030 /* EntitiesTableViewController.swift */; };
 		21AEA81B1D70983F005EF030 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 21AEA8191D70983F005EF030 /* Model.xcdatamodeld */; };
-		21AEA8201D7098DB005EF030 /* Entity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AEA81E1D7098DB005EF030 /* Entity+CoreDataProperties.swift */; };
-		21AEA8211D7098DB005EF030 /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AEA81F1D7098DB005EF030 /* Entity.swift */; };
 		21AEA8231D709912005EF030 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AEA8221D709911005EF030 /* Stack.swift */; };
 		21AEA8251D709AC8005EF030 /* EntityController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AEA8241D709AC8005EF030 /* EntityController.swift */; };
+		21AEA82F1D70AD23005EF030 /* Entity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AEA82D1D70AD23005EF030 /* Entity+CoreDataProperties.swift */; };
+		21AEA8301D70AD23005EF030 /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AEA82E1D70AD23005EF030 /* Entity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,10 +28,10 @@
 		21AEA80F1D709485005EF030 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		21AEA8171D7096C1005EF030 /* EntitiesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EntitiesTableViewController.swift; path = ../EntitiesTableViewController.swift; sourceTree = "<group>"; };
 		21AEA81A1D70983F005EF030 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
-		21AEA81E1D7098DB005EF030 /* Entity+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Entity+CoreDataProperties.swift"; path = "../Entity+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		21AEA81F1D7098DB005EF030 /* Entity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Entity.swift; path = ../Entity.swift; sourceTree = "<group>"; };
 		21AEA8221D709911005EF030 /* Stack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
 		21AEA8241D709AC8005EF030 /* EntityController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntityController.swift; sourceTree = "<group>"; };
+		21AEA82D1D70AD23005EF030 /* Entity+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Entity+CoreDataProperties.swift"; path = "../Entity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		21AEA82E1D70AD23005EF030 /* Entity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Entity.swift; path = ../Entity.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,9 +88,9 @@
 			isa = PBXGroup;
 			children = (
 				21AEA8191D70983F005EF030 /* Model.xcdatamodeld */,
+				21AEA82D1D70AD23005EF030 /* Entity+CoreDataProperties.swift */,
+				21AEA82E1D70AD23005EF030 /* Entity.swift */,
 				21AEA8221D709911005EF030 /* Stack.swift */,
-				21AEA81E1D7098DB005EF030 /* Entity+CoreDataProperties.swift */,
-				21AEA81F1D7098DB005EF030 /* Entity.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -175,10 +175,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21AEA82F1D70AD23005EF030 /* Entity+CoreDataProperties.swift in Sources */,
 				21AEA8181D7096C1005EF030 /* EntitiesTableViewController.swift in Sources */,
-				21AEA8211D7098DB005EF030 /* Entity.swift in Sources */,
+				21AEA8301D70AD23005EF030 /* Entity.swift in Sources */,
 				21AEA8041D709485005EF030 /* AppDelegate.swift in Sources */,
-				21AEA8201D7098DB005EF030 /* Entity+CoreDataProperties.swift in Sources */,
 				21AEA8231D709912005EF030 /* Stack.swift in Sources */,
 				21AEA8251D709AC8005EF030 /* EntityController.swift in Sources */,
 				21AEA81B1D70983F005EF030 /* Model.xcdatamodeld in Sources */,
