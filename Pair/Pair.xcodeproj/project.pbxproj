@@ -16,6 +16,7 @@
 		21AEA8201D7098DB005EF030 /* Entity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AEA81E1D7098DB005EF030 /* Entity+CoreDataProperties.swift */; };
 		21AEA8211D7098DB005EF030 /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AEA81F1D7098DB005EF030 /* Entity.swift */; };
 		21AEA8231D709912005EF030 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AEA8221D709911005EF030 /* Stack.swift */; };
+		21AEA8251D709AC8005EF030 /* EntityController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AEA8241D709AC8005EF030 /* EntityController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		21AEA81E1D7098DB005EF030 /* Entity+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Entity+CoreDataProperties.swift"; path = "../Entity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		21AEA81F1D7098DB005EF030 /* Entity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Entity.swift; path = ../Entity.swift; sourceTree = "<group>"; };
 		21AEA8221D709911005EF030 /* Stack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
+		21AEA8241D709AC8005EF030 /* EntityController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntityController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				21AEA8031D709485005EF030 /* AppDelegate.swift */,
 				21AEA81C1D709844005EF030 /* View Controller */,
 				21AEA81D1D709850005EF030 /* Model */,
+				21AEA8261D709ACC005EF030 /* Model Controller */,
 				21AEA8071D709485005EF030 /* Main.storyboard */,
 				21AEA80A1D709485005EF030 /* Assets.xcassets */,
 				21AEA80C1D709485005EF030 /* LaunchScreen.storyboard */,
@@ -90,6 +93,14 @@
 				21AEA81F1D7098DB005EF030 /* Entity.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		21AEA8261D709ACC005EF030 /* Model Controller */ = {
+			isa = PBXGroup;
+			children = (
+				21AEA8241D709AC8005EF030 /* EntityController.swift */,
+			);
+			name = "Model Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,6 +180,7 @@
 				21AEA8041D709485005EF030 /* AppDelegate.swift in Sources */,
 				21AEA8201D7098DB005EF030 /* Entity+CoreDataProperties.swift in Sources */,
 				21AEA8231D709912005EF030 /* Stack.swift in Sources */,
+				21AEA8251D709AC8005EF030 /* EntityController.swift in Sources */,
 				21AEA81B1D70983F005EF030 /* Model.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
