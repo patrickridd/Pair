@@ -48,6 +48,8 @@ class EntityController {
 
         let _ = Entity(name: name, group: "Group \(groupNumber)")
         saveContext()
+        self.entities = (fetchedResultsController.fetchedObjects as? [Entity]) ?? []
+
     }
     
     
