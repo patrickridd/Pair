@@ -34,6 +34,8 @@ class EntityController {
         fetchedResultsController = NSFetchedResultsController(fetchRequest: request, managedObjectContext: moc, sectionNameKeyPath: "group", cacheName: nil)
         
         _ = try? fetchedResultsController.performFetch()
+        self.entities = (fetchedResultsController.fetchedObjects as? [Entity]) ?? []
+
     }
     
     func addEntity(name: String) {
@@ -48,7 +50,37 @@ class EntityController {
         saveContext()
     }
     
-    func randomizeGroups 
+    
+    func randomizeGroups() {
+      
+        let shuffledEntities = shuffleArray(&self.entities)
+        
+       // var groupNumber = 1
+        var entityNumber = 0
+      //  var tempNumberOfObjects = numberOfObjects
+        for entity in shuffledEntities {
+            
+            entity.group = "Group \(entityNumber/2 + 1)"
+            entityNumber += 1
+            
+        }
+    
+        
+    }
+    
+    func shuffleArray(inout newEntities: [Entity]) -> [Entity]
+    {
+        for var index = newEntities.count - 1; index > 0; index -= 1
+        {
+            // Random int from 0 to index-1
+            let j = Int(arc4random_uniform(UInt32(index-1)))
+            
+            // Swap two array elements
+            // Notice '&' required as swap uses 'inout' parameters
+            swap(&newEntities[index], &newEntities[j])
+        }
+        return newEntities
+    }
     
     func deleteEntity(entity: Entity) {
         moc.deleteObject(entity)

@@ -21,7 +21,7 @@ class EntitiesTableViewController: UIViewController, UITableViewDataSource,UITab
 
   
     @IBAction func randomizeButtonTapped(sender: AnyObject) {
-        
+        EntityController.sharedController.randomizeGroups()
         
     }
     
