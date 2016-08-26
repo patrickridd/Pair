@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="VeH-8R-p67">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="V4C-b2-VoE">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="VeH-8R-p67" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="l6x-6C-JKT">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="HKR-M8-dhC" kind="relationship" relationship="rootViewController" id="bNK-F9-wwe"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YJ2-t9-tYE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="239" y="387"/>
+        </scene>
+        <!--Entities Table View Controller-->
+        <scene sceneID="9T1-fm-4lX">
+            <objects>
+                <viewController id="HKR-M8-dhC" customClass="EntitiesTableViewController" customModule="Pair" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="A6d-LQ-Syz"/>
+                        <viewControllerLayoutGuide type="bottom" id="HvI-dY-tsX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hBm-FI-ftM">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NJW-Rp-VR6">
+                                <rect key="frame" x="122" y="418" width="76" height="30"/>
+                                <state key="normal" title="Randomize"/>
+                                <connections>
+                                    <action selector="randomizeButtonTapped:" destination="HKR-M8-dhC" eventType="touchUpInside" id="pzx-yK-rtJ"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dFp-lP-Pz6">
+                                <rect key="frame" x="0.0" y="64" width="320" height="320"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="entityCell" id="6ca-zt-rTM">
+                                        <rect key="frame" x="0.0" y="92" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6ca-zt-rTM" id="4pc-Ce-Vsj">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="HKR-M8-dhC" id="LgQ-sz-sLe"/>
+                                    <outlet property="delegate" destination="HKR-M8-dhC" id="fH4-tW-Vcq"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="NJW-Rp-VR6" firstAttribute="centerX" secondItem="hBm-FI-ftM" secondAttribute="centerX" id="60i-e8-eWN"/>
+                            <constraint firstItem="dFp-lP-Pz6" firstAttribute="top" secondItem="A6d-LQ-Syz" secondAttribute="bottom" id="BSi-BI-wzo"/>
+                            <constraint firstAttribute="trailing" secondItem="dFp-lP-Pz6" secondAttribute="trailing" id="Y8A-sL-dWi"/>
+                            <constraint firstItem="dFp-lP-Pz6" firstAttribute="leading" secondItem="hBm-FI-ftM" secondAttribute="leading" id="lJT-jY-BFh"/>
+                            <constraint firstItem="dFp-lP-Pz6" firstAttribute="height" secondItem="hBm-FI-ftM" secondAttribute="height" multiplier="2/3" id="nrL-NM-fJ0"/>
+                            <constraint firstItem="NJW-Rp-VR6" firstAttribute="top" secondItem="dFp-lP-Pz6" secondAttribute="bottom" constant="34" id="ziZ-ya-Ycz"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ils-0O-8Kv">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="mLR-I4-tXO">
+                            <connections>
+                                <action selector="addButtonTapped:" destination="HKR-M8-dhC" id="AZi-Ra-DRs"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="dFp-lP-Pz6" id="Hba-Ao-Zjo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bGs-cf-hLk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="581" y="389"/>
+        </scene>
+    </scenes>
+</document>
